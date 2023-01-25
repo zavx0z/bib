@@ -16,13 +16,16 @@ node {
         stage("удалить все изображения") {
             sshCommand remote: remote, command: 'docker rmi -f $(docker images -aq)', failOnError: false
         }
-        stage("up bib") {
-//             writeFile file: 'abc.sh', text: 'ls'
+        stage("развертывание образа bib") {
             sshCommand remote: remote, command: 'sh /home/zavx0z/projects/bib/docker/startUbuntu.sh'
+        }
+        stage("Запуск VNC-viewer в Google Chrome") {
+            sshCommand remote: remote, command: 'google-chrome http://localhost:6080'
+        }
+    }
+}
+//             writeFile file: 'abc.sh', text: 'ls'
 //             sshPut remote: remote, from: 'abc.sh', into: '.'
 //             sshGet remote: remote, from: 'abc.sh', into: 'bac.sh', override: true
 //             sshScript remote: remote, script: 'abc.sh'
 //             sshRemove remote: remote, path: 'abc.sh'
-        }
-    }
-}
