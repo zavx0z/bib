@@ -1,6 +1,6 @@
 def remote = [:]
 remote.name = "jenkins"
-remote.host = "192.168.88.254"
+remote.host = "192.168.88.44"
 remote.allowAnyHosts = true
 
 node {
