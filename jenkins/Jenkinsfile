@@ -10,22 +10,21 @@ node {
         stage("остановить все контейнеры") {
             sshCommand remote: remote, command: 'docker stop $(docker ps -a -q)', failOnError: false
         }
-        stage("удалить все контейнеры") {
-            sshCommand remote: remote, command: 'docker rm $(docker ps -a -q)', failOnError: false
-        }
-        stage("удалить все изображения") {
-            sshCommand remote: remote, command: 'docker rmi -f $(docker images -aq)', failOnError: false
-        }
+//         stage("удалить все контейнеры") {
+//             sshCommand remote: remote, command: 'docker rm $(docker ps -a -q)', failOnError: false
+//         }
+//         stage("удалить все изображения") {
+//             sshCommand remote: remote, command: 'docker rmi -f $(docker images -aq)', failOnError: false
+//         }
         stage("развертывание образа bib") {
             sshCommand remote: remote, command: 'sh /home/zavx0z/projects/bib/docker/startUbuntu.sh'
         }
         stage("Запуск VNC-viewer в Google Chrome") {
-            sshCommand remote: remote, command: 'google-chrome http://localhost:6080'
+            writeFile file: 'google.sh', text: 'export DISPLAY=:1\n google-chrome http://localhost:6080'
+            sshPut remote: remote, from: 'google.sh', into: '.'
+            sshScript remote: remote, script: 'google.sh'
         }
     }
 }
-//             writeFile file: 'abc.sh', text: 'ls'
-//             sshPut remote: remote, from: 'abc.sh', into: '.'
 //             sshGet remote: remote, from: 'abc.sh', into: 'bac.sh', override: true
-//             sshScript remote: remote, script: 'abc.sh'
 //             sshRemove remote: remote, path: 'abc.sh'
