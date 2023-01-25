@@ -1,0 +1,112 @@
+{
+   "checksum": "1808e5504a0077b741b514ce3434c497",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13316089285232881",
+            "date_last_used": "13318591421796439",
+            "guid": "1003154c-99ec-40af-850c-2a3ec0eea09b",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Лента",
+            "type": "url",
+            "url": "https://lenta.com/lk/"
+         }, {
+            "date_added": "13316088851470689",
+            "date_last_used": "13318591167810212",
+            "guid": "194b92b9-c1ca-41fc-9d1b-124d939176e4",
+            "id": "6",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "OZON",
+            "type": "url",
+            "url": "https://www.ozon.ru/"
+         }, {
+            "date_added": "13316801385225776",
+            "date_last_used": "0",
+            "guid": "b2cb2d1b-dffe-43fa-98c2-9782f46a23e9",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "",
+            "type": "url",
+            "url": "https://www.youtube.com/"
+         }, {
+            "children": [ {
+               "date_added": "13317498435483377",
+               "date_last_used": "0",
+               "guid": "c7aa97ad-808b-4afb-8fe3-64bed61edf53",
+               "id": "9",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Швабра для уборки HAUSMANN Careful sponge HM-39 – купить онлайн, каталог товаров с ценами интернет-магазина Лента | Москва, Санкт-Петербург, Россия",
+               "type": "url",
+               "url": "https://lenta.com/product/514206-rossiya-514206/"
+            } ],
+            "date_added": "13317498448250588",
+            "date_last_used": "0",
+            "date_modified": "13317498448250588",
+            "guid": "ffbe6d6c-37b8-44c0-b4ae-8685947dda6f",
+            "id": "8",
+            "name": "товары",
+            "type": "folder"
+         }, {
+            "date_added": "13318063380186185",
+            "date_last_used": "0",
+            "guid": "794d442e-8432-4849-8a57-ce5b64c03327",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "",
+            "type": "url",
+            "url": "https://vkusvill.ru/"
+         }, {
+            "date_added": "13318073462798104",
+            "date_last_used": "13318591193874394",
+            "guid": "acc8a7fe-4f5f-4c21-bf50-facd18e2ed76",
+            "id": "11",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "СПЕЦАГРО Сервис интернет магазин запчастей для садово-парковой техники!",
+            "type": "url",
+            "url": "https://specagro-market.ru/"
+         } ],
+         "date_added": "13318525593907185",
+         "date_last_used": "0",
+         "date_modified": "13318073462798104",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13318525593907194",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13318525593907195",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CvsBCtoBCIiBAhLTARI8CAISOAoGCgJibRABEDMaEgkAsUjdmfIFACEAsUjdmfIFADIYChYIAhEWnC7umfIFABgAIQAAAAAAAAAAIABI7p/KydwwcMfHnKrcMJIBfQo0Cg5jaHJvbWVfc3luY19ibRIFNTEhYm0aEgl2cjDumfIFABF2cjDumfIFACl1cjDumfIFAApFChZhbm5vdGF0aW9uX2Nocm9tZV9zeW5jEgU1MSFiZBoSCQBGA+iZ8gUAEQBGA+iZ8gUAKauwLu6Z8gUAMICMjcCe0/wCugECCAESACABKhgxUlQ5WjRoQ25VRjlaNlJUK1RxT1V3PT0SwwEIAxK+AQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRJmWjpBRHF0QVp6SmxLT2twdXhGWVRpRzdWUlV0ZnRkYWltQnF4aGxwU3FaeXdGUmJQRlBRZXc0MHJCU3gyMklTbjFXTzBLSHlhR3k5dnJYblVHV0swbXJ4dUY4aEllN1ZyRUMyUT09GAAgACgAMJ+9+e6p0fwCOABAAEoceXpOQjAxY241NEE3Y1JVMHVUKy9QZ21UdFVvPVoAZQAAAAASwwEIAhK+AQocWWNTVG9udkVTUHdxQ3M0TDJjclZodjY4TDk4PRJmWjpBRHF0QVp5azhRMkpzYjJ6TGh1TEdMTXZvTFZ3OXpDNjFPdnJTdEJ2d2lKdzJEckIzVEFNdmU1ZXVjUnVqZzk0REVYYzRUYWhvUGltYS8vMnAvNFVYOC92ZmRRWkxOcU15QT09GAAgACgAMJ+9+e6p0fwCOABAAEocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAAAS7AEIBxLnAQocd09JeGJaWkFtazdBRjBVaHpGQ045MGMrM0tvPRJmWjpBRHF0QVp4UTI0WWM0Y09OWmM1bkhkeXQveU5LZkZMV1hyRDBQWERWZEJwcytoU2VuV25xQmt4d2pUNGtoTitJK1RVWEhQenRJUzUwQVdZdUIrSld2elhiTWhmNHEzZVNaZz09GAAgAigCMMX/ru+p0fwCOIrWg/TVMEDEyJyq3DBKHDdMeUhIcFhObjJSa3JPV2c4WFZXbFRsZXVDST1aHyId7kNYNDluVmhKbmVYTUlZTENyNW02S29pdUFyST1lOPk5MxLsAQgFEucBChxXMmRjdkdrdXlScGkwNjViekcwVnoxZ2ZTQkE9EmZaOkFEcXRBWnhRMjRZYzRjT05aYzVuSGR5dC95Tkt0YmEyaXpiV2FxdXVOWWgvRHJzKys0dThKR0JGRDM2eEFzSXV3N1B6MHFEWEFHMVFaclBkcks0QWc1dHhTVTk0VGxuQldBPT0YACACKAIwxf+u76nR/AI48sS8oNMwQMLInKrcMEocQTIxSmRUeEdmbzd0ZDVxQ2pFVmxsN1Q5RlZrPVofIh27Z0I0dEdIcHZaQ29mS3RmREt1dXk0WWdvQlFBPWVG6pm4EusBCAkS5gEKHExic1ppMnZkOGwzWVdZRDBJWGw4a0hUYzBnTT0SZlo6QURxdEFaeFEyNFljNGNPTlpjNW5IZHl0L3lOSzVUVHF1UXZkNGVEaStta1VrVlJlOWJTc3Zyam5vc3QxazN3YzBuSTFFNzFJSHFmRzFwbVJBNzR2OEU0OXpWVUxGTDI1aGc9PRgAIAAoADDV7pqft7P8Ajicn7TA2DBAnJ+0wNgwShxMcnhuSU5rRmdtY0MvWDVKeWQyNjRBazJQZEU9Wh4iHEtnNEFONmExeDE0T0xzclZQZ0RDSzhsemY0ST1lRuqZuBLsAQgIEucBChxhZ0liMS9jNkVXelhMY2wyNzBnZGMwRTRpRW89EmZaOkFEcXRBWnhRMjRZYzRjT05aYzVuSGR5dC95TktBNFpuWnVaejVXOFBHcnl0T254M1ZuWkdPNnV0cjFGbVl6NUNIOVd1aFVKc2duN1ZRdjl1QjhEbmlGN1dHVzlkSWk1SkZRPT0YACAAKAAw1e6an7ez/AI4+4K1wNgwQPuCtcDYMEocMDRCTWNiMVlnQzV1RzFJRkozRlRSSkZxUTg0PVofIh33dldjUWJZRnhOTzVia2tyUThxTDRjTUJPdURzPWUAAAAAEuwBCAYS5wEKHHkxM0wvTXlFSUVjUEw0VUxvQ1JLQTZTSllKND0SZlo6QURxdEFaeFEyNFljNGNPTlpjNW5IZHl0L3lOS1QxblBsUm5TQ2xCL3JQVU1tanFUZit5ZzQ2OVRFejlTcnJqK3J0WFJkcXlNNXptRmJScWNqNXZ2c05GOVFhYTFFS29VM3c9PRgAIAIoAjDF/67vqdH8AjiPiKKg0zBAw8icqtwwShxwekxLUW9Cd0ZpMVV2R1QvLzkyQ3hhcGV1V0E9Wh8iHd10SzB4YTdBK2hrRys3MmdxT1pMN0NOaEZpWnc9ZX2Dd2AS7AEIChLnAQocamNudUJvSHVNVkdzdWJXSXZRcU45VDBQSk9RPRJmWjpBRHF0QVp4UTI0WWM0Y09OWmM1bkhkeXQveU5LYlpSai9LOW9MK1VESFBjZzVhSUZYY0RKaCtHUmRVVDM5d3BjaExjTG9rbmdVRUF1cnlQbkhmM3o0RVA5NmswZ2M2eWs4dz09GAAgAigCMMX/ru+p0fwCONrd5c3aMEDFyJyq3DBKHDMwOFluUmxsb1FTRWYvMGRqRmZQMkx4VUtNQT1aHyId+2NHdnVHbTZSU2NyT3dBVTJxRWlmU1V4ai9UWT1lEYyDmBLsAQgLEucBChxtSUZTT3E0ekEwc0xFOGUrbkhEaGptMU9xK0k9EmZaOkFEcXRBWnhRMjRZYzRjT05aYzVuSGR5dC95Tkt5VWxHZEhlMkRZemNBazlrNmNGZ2Z3Rzl0Njk1Z2JMWkdwVnZrQjcwcWNQd1NQWTdud1JocmdQWEZpNUhhTWNubVpFVE1BPT0YACACKAIwxf+u76nR/AI4j5DN0towQMbInKrcMEocQzB1ZnlPN1VqM2pUMGgvaUE2M1hWUUloL1JNPVofIh39WFpJOGtYbDJxSXBCSSt3UUI3MkJHRXlLRS9VPWWn6SAMEqsBCAESpgEKHHl4Si82ZnZrZWNyN2twNUVRekI0dFdMcGRiRT0STlo6QURxdEFaemU4U3hBa1UvSWNzZ0JXUjhJMm01ckp0enBlVmE1cTJsR0NjY0o3M2JnR3NYS091QmFzeCszL0lPVDFFbEczRXE2SENIThgAIAAoADCfvfnuqdH8AjgAQABKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAMAE4AA==",
+   "version": 1
+}

@@ -1,0 +1,5 @@
+---
+addon_packages:
+  - vim-tiny
+  - xfce4-terminal
+desktop: xfce4
