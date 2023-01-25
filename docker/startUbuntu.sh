@@ -3,7 +3,7 @@
 # Connect to http://localhost:6080/
 REPO=zavx0z/
 IMAGE=bib
-TAG=0.0.1
+TAG=latest
 
 if [ -z "$SUDO_UID" ]
 then
