@@ -1,3 +1,3 @@
-2023/01/19-12:02:51.684 41759 Reusing MANIFEST /home/zavx0z/projects/lenta/browser_store/Default/IndexedDB/https_www.ozon.ru_0.indexeddb.leveldb/MANIFEST-000001
-2023/01/19-12:02:51.684 41759 Recovering log #3
-2023/01/19-12:02:51.684 41759 Reusing old log /home/zavx0z/projects/lenta/browser_store/Default/IndexedDB/https_www.ozon.ru_0.indexeddb.leveldb/000003.log 
+2023/01/30-17:36:37.421 8f8 Reusing MANIFEST /home/zavx0z/.config/google-chrome/Default/IndexedDB/https_www.ozon.ru_0.indexeddb.leveldb/MANIFEST-000001
+2023/01/30-17:36:37.421 8f8 Recovering log #3
+2023/01/30-17:36:37.422 8f8 Reusing old log /home/zavx0z/.config/google-chrome/Default/IndexedDB/https_www.ozon.ru_0.indexeddb.leveldb/000003.log 

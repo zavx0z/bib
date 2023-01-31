@@ -1,6 +1,6 @@
 def remote = [:]
 remote.name = "jenkins"
-remote.host = "192.168.88.44"
+remote.host = "repozitarium.local"
 remote.allowAnyHosts = true
 
 node {
@@ -15,6 +15,9 @@ node {
 //         }
 //         stage("удалить все изображения") {
 //             sshCommand remote: remote, command: 'docker rmi -f $(docker images -aq)', failOnError: false
+//         }
+//         stage("удалить все тома") {
+//             sshCommand remote: remote, command: 'docker volume prune', failOnError: false
 //         }
         stage("развертывание образа bib") {
             sshCommand remote: remote, command: 'sh /home/zavx0z/projects/bib/docker/startUbuntu.sh'

@@ -67,6 +67,8 @@ RUN wget https://github.com/krallin/tini/archive/v0.19.0.tar.gz \
 # Google-Chrome
 RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN apt-get update && apt-get install -y ./google-chrome-stable_current_amd64.deb && rm -f ./google-chrome-stable_current_amd64
+RUN mkdir -p /var/run/dbus
+RUN export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/dbus/system_bus_socket
 
 # Killsession app
 COPY killsession/ /tmp/killsession
@@ -94,17 +96,6 @@ RUN pip3 install -r /tmp/requirements.txt
 COPY rootfs/usr/local/lib/web/backend/requirements.txt /tmp/
 RUN pip3 install -r /tmp/requirements.txt \
     && ln -s /usr/bin/python3 /usr/local/bin/python
-#RUN apt-get update \
-#    && dpkg-query -W -f='${Package}\n' > /tmp/a.txt \
-#    && apt-get install -y python3-pip python3-dev build-essential \
-#    && pip3 install setuptools wheel && pip3 install -r /tmp/requirements.txt \
-#    && ln -s /usr/bin/python3 /usr/local/bin/python \
-#    && dpkg-query -W -f='${Package}\n' > /tmp/b.txt \
-#    && apt-get remove -y `diff --changed-group-format='%>' --unchanged-group-format='' /tmp/a.txt /tmp/b.txt | xargs` \
-#    && apt-get autoclean -y \
-#    && apt-get autoremove -y \
-#    && rm -rf /var/lib/apt/lists/* \
-#    && rm -rf /var/cache/apt/* /tmp/a.txt /tmp/b.txt
 
 RUN apt-get autoclean -y \
     && apt-get autoremove -y \
@@ -121,7 +112,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends curl ca-certificates gnupg patch
 
 # nodejs
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     && apt-get install -y nodejs
 
 # yarn
@@ -151,7 +142,7 @@ COPY rootfs /
 RUN ln -sf /usr/local/lib/web/frontend/static/websockify /usr/local/lib/web/frontend/static/novnc/utils/websockify && \
 	chmod +x /usr/local/lib/web/frontend/static/websockify/run
 
-EXPOSE 80
+EXPOSE 80 9224
 WORKDIR /root
 ENV HOME=/home/ubuntu \
     SHELL=/bin/bash
