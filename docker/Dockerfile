@@ -23,9 +23,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install apt-utils -y \
 
 # install debs error if combine together
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends --allow-unauthenticated \
-        xvfb x11vnc \
-        vim-tiny ttf-ubuntu-font-family ttf-wqy-zenhei
+    && apt-get install -y --no-install-recommends --allow-unauthenticated xvfb x11vnc vim-tiny ttf-ubuntu-font-family ttf-wqy-zenhei
 
 # Alternative VNC server
 # RUN apt-get install -y tigervnc-scraping-server
@@ -40,7 +38,7 @@ RUN apt-get update \
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends --allow-unauthenticated \
-        lxde gtk2-engines-murrine gnome-themes-standard gtk2-engines-pixbuf gtk2-engines-murrine arc-theme
+        lxde gtk2-engines-murrine gnome-themes-standard gtk2-engines-pixbuf gtk2-engines-murrine arc-theme xdotool
 
 
 RUN apt-get update && apt-get install -y python3 python3-tk gcc make cmake
@@ -135,16 +133,17 @@ RUN apt-get autoremove && apt-get autoclean
 # merge
 ################################################################################
 FROM system
-#LABEL maintainer="zavx0z"
+LABEL maintainer="zavx0z"
 
 COPY --from=builder /src/web/dist/ /usr/local/lib/web/frontend/
 COPY rootfs /
-RUN ln -sf /usr/local/lib/web/frontend/static/websockify /usr/local/lib/web/frontend/static/novnc/utils/websockify && \
-	chmod +x /usr/local/lib/web/frontend/static/websockify/run
+RUN ln -sf /usr/local/lib/web/frontend/static/websockify /usr/local/lib/web/frontend/static/novnc/utils/websockify && chmod +x /usr/local/lib/web/frontend/static/websockify/run
 
-EXPOSE 80 9224
+RUN apt-get update && apt-get install -y openssh-server vim
+EXPOSE 80 9224 22
 WORKDIR /root
 ENV HOME=/home/ubuntu \
-    SHELL=/bin/bash
+    SHELL=/bin/bash \
+    DISPLAY=:1
 HEALTHCHECK --interval=30s --timeout=5s CMD curl --fail http://127.0.0.1:6079/api/health
 ENTRYPOINT ["/startup.sh"]
