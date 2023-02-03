@@ -20,7 +20,6 @@ fi
 docker run --rm --detach \
   --shm-size=512mb \
   --publish 6080:80 \
-  --publish 9222:9224 \
   --publish 5900:5900 \
   --volume /home/zavx0z/projects/simulant/:/home/"${USER_NAME}"/simulant:rw \
   --volume "${PWD}"/../browser_store:/home/"${USER_NAME}"/.config/google-chrome:rw \

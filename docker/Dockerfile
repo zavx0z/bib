@@ -18,7 +18,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install apt-utils -y \
     && apt-get update \
     && apt-get install -y --no-install-recommends --allow-unauthenticated \
         supervisor nginx sudo net-tools zenity xz-utils \
-        dbus-x11 x11-utils alsa-utils \
+        dbus-x11 x11-utils xclip alsa-utils \
         mesa-utils libgl1-mesa-dri wget
 
 # install debs error if combine together
@@ -64,9 +64,7 @@ RUN wget https://github.com/krallin/tini/archive/v0.19.0.tar.gz \
 
 # Google-Chrome
 RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN apt-get update && apt-get install -y ./google-chrome-stable_current_amd64.deb && rm -f ./google-chrome-stable_current_amd64
-RUN mkdir -p /var/run/dbus
-RUN export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/dbus/system_bus_socket
+RUN apt-get update && apt-get install -y ./google-chrome-stable_current_amd64.deb && rm -f ./google-chrome-stable_current_amd64.deb
 
 # Killsession app
 COPY killsession/ /tmp/killsession
@@ -95,6 +93,7 @@ COPY rootfs/usr/local/lib/web/backend/requirements.txt /tmp/
 RUN pip3 install -r /tmp/requirements.txt \
     && ln -s /usr/bin/python3 /usr/local/bin/python
 
+#clean
 RUN apt-get autoclean -y \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
@@ -140,7 +139,7 @@ COPY rootfs /
 RUN ln -sf /usr/local/lib/web/frontend/static/websockify /usr/local/lib/web/frontend/static/novnc/utils/websockify && chmod +x /usr/local/lib/web/frontend/static/websockify/run
 
 RUN apt-get update && apt-get install -y openssh-server vim
-EXPOSE 80 9224 22
+EXPOSE 80 22
 WORKDIR /root
 ENV HOME=/home/ubuntu \
     SHELL=/bin/bash \
