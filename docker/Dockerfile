@@ -19,7 +19,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install apt-utils -y \
     && apt-get install -y --no-install-recommends --allow-unauthenticated \
         supervisor nginx sudo net-tools zenity xz-utils \
         dbus-x11 x11-utils xclip alsa-utils \
-        mesa-utils libgl1-mesa-dri wget
+        mesa-utils libgl1-mesa-dri wget git
 
 # install debs error if combine together
 RUN apt-get update \
@@ -142,7 +142,6 @@ RUN apt-get update && apt-get install -y openssh-server vim
 EXPOSE 80 22
 WORKDIR /root
 ENV HOME=/home/ubuntu \
-    SHELL=/bin/bash \
-    DISPLAY=:1
+    SHELL=/bin/bash
 HEALTHCHECK --interval=30s --timeout=5s CMD curl --fail http://127.0.0.1:6079/api/health
 ENTRYPOINT ["/startup.sh"]

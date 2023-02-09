@@ -10,7 +10,7 @@ The source files are available on [GitHub](https://github.com/Frederic-Boulanger
 Typical usage is:
 
 ```
-docker run --rm -d -p 6080:80 -v $PWD:/workspace:rw -e USERNAME=username -e USERID=userid -e RESOLUTION=1680x1050 --name ubuntu-novnc fredblgr/ubuntu-novnc:20.04
+docker run --rm -d -p 6080:80 -v $PWD:/workspace:rw -e USERNAME=username -e USERID=userid -e --name ubuntu-novnc fredblgr/ubuntu-novnc:20.04
 ```
 
 Very Quick Start
@@ -110,7 +110,6 @@ use the following variables in your script:
 
 * ```$USER``` is the user name of the user connected to the session
 * ```$HOME``` is the home directory of that user
-* ```$RESOLUTION```, if defined, is the resolution of the display, in the form ```<width>x<height>``` in pixels.
 
 License
 ==================

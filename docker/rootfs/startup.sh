@@ -1,15 +1,16 @@
 #!/bin/bash
 
+DISPLAY=:1
+RESOLUTION="1920x1080"
+echo "set display $DISPLAY"
+sed -i -e "s|%DISPLAY%|$DISPLAY|" /etc/supervisor/conf.d/supervisord.conf
+
 if [ -n "$VNC_PASSWORD" ]; then
   echo -n "$VNC_PASSWORD" >/.password1
   x11vnc -storepasswd $(cat /.password1) /.password2
   sed -i 's/^command=x11vnc.*/& -rfbauth \/.password2/' /etc/supervisor/conf.d/supervisord.conf
-  #    echo -n "$VNC_PASSWORD" | vncpasswd -f > /.passwordvnc
   chmod 400 /.password*
   export VNC_PASSWORD=
-# else
-#     echo -n "ubuntu" | vncpasswd -f > /.passwordvnc
-#     chmod 400 /.passwordvnc
 fi
 
 if [ -n "$X11VNC_ARGS" ]; then
@@ -21,10 +22,11 @@ if [ -n "$OPENBOX_ARGS" ]; then
 fi
 
 if [ -n "$RESOLUTION" ]; then
-  sed -i "s/1024x768/$RESOLUTION/" /usr/local/bin/xvfb.sh
+  sed -i "s/1920x1080/$RESOLUTION/" /usr/local/bin/xvfb.sh
 fi
 
 USER=${USERNAME:-root}
+
 HOME=/root
 if [ "$USER" != "root" ]; then
   echo "* enable custom user: $USER"
@@ -52,6 +54,7 @@ if [ "$USER" != "root" ]; then
   chown -R $USER:$USER ${HOME}
   [ -d "/dev/snd" ] && chgrp -R adm /dev/snd
 fi
+
 sed -i -e "s|%USER%|$USER|" -e "s|%HOME%|$HOME|" /etc/supervisor/conf.d/supervisord.conf
 
 # home folder
