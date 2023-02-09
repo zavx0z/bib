@@ -1,8 +1,12 @@
 #!/bin/bash
 service ssh start
 
-USER_DATA_DIR="${HOME}/.config/google-chrome/"
+# rewrite Preferences google-chrome
+python /google-preferences/PreferencesHandler.py
+
+USER_DATA_DIR="${HOME}/.config/google-chrome"
 find "${USER_DATA_DIR}" -name Singleton\* -exec rm {} \;
+chown -R "${USER}:${USER}" "${USER_DATA_DIR}"
 
 #mkdir "${USER_DATA_DIR}" &&
 #  chown -R "${USER}:${USER}" "${USER_DATA_DIR}" &&

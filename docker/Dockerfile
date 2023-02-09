@@ -51,9 +51,6 @@ RUN wget https://github.com/krallin/tini/archive/v0.19.0.tar.gz \
     cd tini-0.19.0; cmake . && make && make install \
  && cd ..; rm -r tini-0.19.0 v0.19.0.tar.gz
 
-#ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
-#RUN chmod +x /bin/tini
-
 # ffmpeg
 # RUN apt-get update \
 #     && apt-get install -y --no-install-recommends --allow-unauthenticated \
@@ -113,7 +110,7 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     && apt-get install -y nodejs
 
 # yarn
- RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
     && apt-get update \
     && apt-get install -y yarn
@@ -139,6 +136,10 @@ COPY rootfs /
 RUN ln -sf /usr/local/lib/web/frontend/static/websockify /usr/local/lib/web/frontend/static/novnc/utils/websockify && chmod +x /usr/local/lib/web/frontend/static/websockify/run
 
 RUN apt-get update && apt-get install -y openssh-server vim
+
+# chrome configurator
+RUN git clone "https://github.com/zavx0z/google-preferences.git" && pip install -r google-preferences/requirements.txt
+
 EXPOSE 80 22
 WORKDIR /root
 ENV HOME=/home/ubuntu \

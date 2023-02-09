@@ -2,7 +2,7 @@ Build
 -----
 
 ```shell
-docker build . -t zavx0z/bib:0.0.6 -t zavx0z/bib:latest
+docker build . -t zavx0z/bib:0.0.9 -t zavx0z/bib:latest
 ```
 
 Push

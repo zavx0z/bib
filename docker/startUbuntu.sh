@@ -18,14 +18,13 @@ docker run --rm --detach \
   --shm-size=512mb \
   --publish 6080:80 \
   --publish 5900:5900 \
-  --volume /home/zavx0z/projects/chrome_bot/:/home/"${USER_NAME}"/chrome_bot:rw \
+  --volume "${PWD}"/../google-chrome:/home/"${USER_NAME}"/.config/google-chrome:rw \
   --volume "${PWD}"/../downloads:/home/"${USER_NAME}"/Downloads:rw \
+  --volume /home/zavx0z/projects/chrome_bot/:/home/"${USER_NAME}"/chrome_bot:rw \
   --env USERNAME="${USER_NAME}" --env USERID="${USER_ID}" --env PASSWORD=uxusesus \
-  --env GOOGLE_USER=master \
-  --volume /home/zavx0z/projects/user_data_dir:/home/"${USER_NAME}"/.config/google-chrome:rw \
-  --env BITBUCKET_PASSWORD=ATBBQDTYaAMPtgkvNKfnpA3w44v4534B7C4F \
   --name ${IMAGE} \
   --privileged \
   ${REPO}${IMAGE}:${TAG}
 #  --volume "${PWD}"/../browser_store:/home/"${USER_NAME}"/.config/google-chrome:rw \
 #  --env GOOGLE_USER=metaversebdfl \
+#  --env BITBUCKET_PASSWORD=ATBBQDTYaAMPtgkvNKfnpA3w44v4534B7C4F \
