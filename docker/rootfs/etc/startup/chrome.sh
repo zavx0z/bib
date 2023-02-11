@@ -2,7 +2,7 @@
 service ssh start
 
 # rewrite Preferences google-chrome
-python /google-preferences/PreferencesHandler.py
+python /google-preferences/PreferencesHandler.py --config="${HOME}"/chrome/config.yml
 
 USER_DATA_DIR="${HOME}/.config/google-chrome"
 find "${USER_DATA_DIR}" -name Singleton\* -exec rm {} \;
@@ -14,4 +14,5 @@ chown -R "${USER}:${USER}" "${USER_DATA_DIR}"
 #  echo "clone ${GOOGLE_USER}" || find "${USER_DATA_DIR}" -name Singleton\* -exec rm {} \; &&
 #  echo "remove Singleton files"
 #
-pip install -U simulant
+#pip install -U simulant
+pip install -r "${HOME}/simulant/requirements_dev.txt"

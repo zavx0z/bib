@@ -61,7 +61,7 @@ RUN wget https://github.com/krallin/tini/archive/v0.19.0.tar.gz \
 
 # Google-Chrome
 RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN apt-get update && apt-get install -y ./google-chrome-stable_current_amd64.deb && rm -f ./google-chrome-stable_current_amd64.deb
+RUN apt-get update && apt-get install -y ./google-chrome-stable_current_amd64.deb && rm -f google-chrome-stable_current_amd64.deb
 
 # Killsession app
 COPY killsession/ /tmp/killsession
@@ -140,7 +140,7 @@ RUN apt-get update && apt-get install -y openssh-server vim
 # chrome configurator
 RUN git clone "https://github.com/zavx0z/google-preferences.git" && pip install -r google-preferences/requirements.txt
 
-EXPOSE 80 22
+EXPOSE 80 22 4444
 WORKDIR /root
 ENV HOME=/home/ubuntu \
     SHELL=/bin/bash

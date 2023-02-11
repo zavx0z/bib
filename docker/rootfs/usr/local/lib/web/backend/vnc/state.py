@@ -29,8 +29,7 @@ class State(object):
     def _update_health(self):
         health = True
         output = gsp.check_output([
-            'supervisorctl', '-c', '/etc/supervisor/supervisord.conf',
-            'status'
+            'supervisorctl', '-c', '/etc/supervisor/supervisord.conf', 'status'
         ], encoding='UTF-8')
         for line in output.strip().split('\n'):
             if not line.startswith('web') and line.find('RUNNING') < 0:

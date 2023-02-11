@@ -17,10 +17,14 @@ fi
 docker run --rm --detach \
   --shm-size=512mb \
   --publish 6080:80 \
+  --publish 4444:4444 \
   --publish 5900:5900 \
+  --publish 5901:5901 \
+  --volume "${PWD}"/chrome:/home/"${USER_NAME}"/chrome:rw \
   --volume "${PWD}"/../google-chrome:/home/"${USER_NAME}"/.config/google-chrome:rw \
   --volume "${PWD}"/../downloads:/home/"${USER_NAME}"/Downloads:rw \
   --volume /home/zavx0z/projects/chrome_bot/:/home/"${USER_NAME}"/chrome_bot:rw \
+  --volume /home/zavx0z/projects/simulant/:/home/"${USER_NAME}"/simulant:rw \
   --env USERNAME="${USER_NAME}" --env USERID="${USER_ID}" --env PASSWORD=uxusesus \
   --name ${IMAGE} \
   --privileged \

@@ -1,0 +1,31 @@
+# default_preferences.yml
+browser:
+  custom_chrome_frame: false
+  app_window_placement:
+    DevToolsApp:
+      always_on_top: false
+      bottom: 1080
+      left: 0
+      maximized: false
+      right: 998
+      top: 0
+      work_area_bottom: 1080
+      work_area_left: 0
+      work_area_right: 998
+      work_area_top: 0
+  window_placement:
+    bottom: 1080
+    left: 1000
+    maximized: false
+    right: 2920
+    top: 0
+    work_area_bottom: 1080
+    work_area_left: 0
+    work_area_right: 2920
+    work_area_top: 0
+devtools:
+  preferences:
+    currentDockState: "undocked"
+  synced_preferences_sync_disabled:
+    sidebarPosition: "bottom"
+    uiTheme: "light" # dark|light
