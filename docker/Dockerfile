@@ -41,7 +41,7 @@ RUN apt-get update \
         lxde gtk2-engines-murrine gnome-themes-standard gtk2-engines-pixbuf gtk2-engines-murrine arc-theme xdotool
 
 
-RUN apt-get update && apt-get install -y python3 python3-tk gcc make cmake
+RUN apt-get update && apt-get install -y python3 python3-tk gcc make cmake tesseract-ocr
 
 # tini to fix subreap
 ARG TINI_VERSION=v0.19.0

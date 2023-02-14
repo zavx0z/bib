@@ -23,8 +23,8 @@ docker run --rm --detach \
   --volume "${PWD}"/chrome:/home/"${USER_NAME}"/chrome:rw \
   --volume "${PWD}"/../google-chrome:/home/"${USER_NAME}"/.config/google-chrome:rw \
   --volume "${PWD}"/../downloads:/home/"${USER_NAME}"/Downloads:rw \
-  --volume /home/zavx0z/projects/chrome_bot/:/home/"${USER_NAME}"/chrome_bot:rw \
-  --volume /home/zavx0z/projects/simulant/:/home/"${USER_NAME}"/simulant:rw \
+  --volume /home/zavx0z/projects/bib_chrome/:/home/"${USER_NAME}"/bib_chrome:rw \
+  --volume /home/zavx0z/projects/simulant/simulant/:/home/"${USER_NAME}"/simulant/simulant:rw \
   --env USERNAME="${USER_NAME}" --env USERID="${USER_ID}" --env PASSWORD=uxusesus \
   --name ${IMAGE} \
   --privileged \

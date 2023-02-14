@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DISPLAY=:1
-RESOLUTION="2920x1130"
+RESOLUTION="2920x1106"
 echo "set display $DISPLAY"
 sed -i -e "s|%DISPLAY%|$DISPLAY|" /etc/supervisor/conf.d/supervisord.conf
 

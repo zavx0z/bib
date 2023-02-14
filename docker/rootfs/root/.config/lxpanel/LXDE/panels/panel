@@ -6,7 +6,7 @@ Global {
   align=left
   margin=0
   widthtype=percent
-  width=100
+  width=1000
   height=26
   transparent=0
   tintcolor=#000000
@@ -87,16 +87,19 @@ Plugin {
   expand=1
   Config {
     tooltips=1
-    IconsOnly=0
+    IconsOnly=-1
     AcceptSkipPager=1
     ShowIconified=1
     ShowMapped=1
     ShowAllDesks=0
-    UseMouseWheel=1
-    UseUrgencyHint=1
+    UseMouseWheel=-1
+    UseUrgencyHint=-1
     FlatButton=0
-    MaxTaskWidth=150
+    MaxTaskWidth=26
     spacing=1
+    SameMonitorOnly=0
+    DisableUpscale=0
+    GroupedTasks=0
   }
 }
 Plugin {
@@ -127,3 +130,4 @@ Plugin {
     CenterText=0
   }
 }
+

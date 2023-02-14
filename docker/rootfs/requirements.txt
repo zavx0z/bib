@@ -1,10 +1,16 @@
-pandas
-pyarrow
-pytest
-allure-pytest
-jinja2
-pytest-env
-parse-schema
+# pandas
+# pyarrow
+# pytest
+# allure-pytest
+# jinja2
+# pytest-env
+# parse-schema
 flask
 gunicorn
+Xlib
+Pillow
+numpy
+opencv-python
+pytesseract
+
 # simulant>=0.7
