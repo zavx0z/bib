@@ -29,3 +29,4 @@ devtools:
   synced_preferences_sync_disabled:
     sidebarPosition: "bottom"
     uiTheme: "light" # dark|light
+    showDetailedInspectTooltip: false
