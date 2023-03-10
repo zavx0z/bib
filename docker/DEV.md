@@ -9,7 +9,7 @@ Build
 -----
 
 ```shell
-docker build . -t zavx0z/bib:noVNC_0.0.1
+docker build . -t zavx0z/bib:noVNC_0.0.3
 ```
 
 Push
