@@ -10,13 +10,14 @@ Build
 
 ```shell
 docker build . -t zavx0z/bib:noVNC_0.0.3
+docker build . -t zavx0z/bib:noVNC_latest
 ```
 
 Push
 ----
 
 ```shell
-docker image push --all-tags zavx0z/bib
+docker image push zavx0z/bib:noVNC_latest
 ```
 
 Clear

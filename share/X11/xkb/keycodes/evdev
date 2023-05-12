@@ -1,0 +1,11 @@
+default xkb_keycodes "evdev" {
+        minimum = 8;
+        maximum = 255;
+        <TAB> = 23;
+        <AD05> = 42; // Cyrillic Д
+        <LALT> = 64;
+        <LCTL> = 37;
+        <SPCE> = 65;
+        <RCTL> = 105;
+        <RALT> = 108;
+};

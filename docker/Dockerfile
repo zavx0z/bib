@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=Europe/Moscow
-
+ENV DISPLAY :1
 RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends --allow-unauthenticated \
     apt-utils \
     sudo \
