@@ -10,14 +10,14 @@ Build
 
 ```shell
 docker build . -t zavx0z/bib:webRTC
-docker build . -t zavx0z/bib:noVNC_latest
+docker build . -t zavx0z/bib:latest
 ```
 
 Push
 ----
 
 ```shell
-docker image push zavx0z/bib:noVNC_latest
+docker image push zavx0z/bib:latest
 ```
 Run shell
 ```bash

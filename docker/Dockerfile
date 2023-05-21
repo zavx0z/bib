@@ -76,9 +76,15 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - && sudo ap
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
     && apt-get update \
     && apt-get install -y yarn
-# build frontend
-COPY screen_share /src/web
-RUN cd /src/web \
+# build webrtc_client-server
+COPY webrtc_server /src/server
+RUN cd /src/server \
+    && yarn upgrade \
+    && yarn \
+    && yarn build
+# build webrtc_client-client
+COPY webrtc_client /src/client
+RUN cd /src/client \
     && yarn upgrade \
     && yarn \
     && yarn build
@@ -90,9 +96,12 @@ RUN apt-get autoremove && apt-get autoclean
 FROM system
 LABEL maintainer="zavx0z"
 
-COPY --from=builder /src/web/build/ /usr/local/lib/web/build/
+COPY --from=builder /src/server/build/ /var/www/server/
+COPY --from=builder /src/client/build/ /var/www/client/
+
+RUN rm /etc/nginx/sites-enabled/default
 
 ENV HOME=/home/ubuntu SHELL=/bin/bash
-EXPOSE 4444 5900 8080
+EXPOSE 4444 5900 80 8080
 WORKDIR /root
 ENTRYPOINT ["/startup.sh"]

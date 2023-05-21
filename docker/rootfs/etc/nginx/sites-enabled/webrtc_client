@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name _;
+
+    access_log /var/log/nginx/webrtcClientAccess.log;
+    error_log /var/log/nginx/webrtcClientError.log;
+
+    root /var/www/client;
+    index index.html;
+
+    location / {
+        try_files $uri /index.html;
+    }
+}

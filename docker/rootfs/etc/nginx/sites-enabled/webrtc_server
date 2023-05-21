@@ -1,0 +1,14 @@
+server {
+    listen 8081;
+    server_name _;
+
+    access_log /var/log/nginx/webrtcServerAccess.log;
+    error_log /var/log/nginx/webrtcServerError.log;
+
+    root /var/www/server;
+    index index.html;
+
+    location / {
+        try_files $uri /index.html;
+    }
+}

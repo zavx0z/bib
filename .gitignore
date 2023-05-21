@@ -9,4 +9,4 @@ build
 venv
 
 # JetBrains IDE
-.idea/
+*.idea/

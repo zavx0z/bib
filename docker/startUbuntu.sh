@@ -8,6 +8,7 @@ USER_NAME="zavx0z"
 PASSWORD="uxusesus"
 docker run --detach \
   --shm-size=512mb \
+  --publish 8088:80 \
   --publish 8080:8080 \
   --publish 5900:5900 \
   --env USERNAME="${USER_NAME}" --env USERID="${USER_ID}" --env PASSWORD="${PASSWORD}" \

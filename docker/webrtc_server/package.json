@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "buildDev": "react-scripts build && rm -rf ../signal/build && cp -r build ../signal/build",
+    "buildDev": "react-scripts build && rm -rf ../signal/server && mkdir -p ../signal/server/ && cp -R build/* ../signal/server/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
