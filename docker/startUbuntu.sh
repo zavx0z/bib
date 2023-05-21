@@ -6,8 +6,10 @@ TAG="webRTC"
 USER_ID=1000
 USER_NAME="zavx0z"
 PASSWORD="uxusesus"
-docker run --detach --rm \
+docker run --detach \
   --shm-size=512mb \
+  --publish 8080:8080 \
+  --publish 5900:5900 \
   --env USERNAME="${USER_NAME}" --env USERID="${USER_ID}" --env PASSWORD="${PASSWORD}" \
   --name ${IMAGE} \
   --privileged \

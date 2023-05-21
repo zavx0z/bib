@@ -195,6 +195,6 @@ const RTCmodel = types
 
 const RTC = RTCmodel.create({
     id: 'RTCvideo',
-    signalServerAddress: "ws://0.0.0.0:8000",
+    signalServerAddress: "ws://0.0.0.0:8080",
 })
 export default RTC

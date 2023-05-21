@@ -19,6 +19,10 @@ Push
 ```shell
 docker image push zavx0z/bib:noVNC_latest
 ```
+Run shell
+```bash
+docker exec -it bib /bin/bash
+```
 
 Clear
 -----
