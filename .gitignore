@@ -9,4 +9,5 @@ build
 venv
 
 # JetBrains IDE
-*.idea/
+.idea/
+/docker/signal/.idea

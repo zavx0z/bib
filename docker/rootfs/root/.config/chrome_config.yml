@@ -28,5 +28,5 @@ devtools:
     currentDockState: "undocked"
   synced_preferences_sync_disabled:
     sidebarPosition: "bottom"
-    uiTheme: "light" # dark|light
+    uiTheme: "dark" # dark|light
     showDetailedInspectTooltip: false
