@@ -9,7 +9,7 @@ Build
 -----
 
 ```shell
-docker build . -t zavx0z/bib:noVNC_0.0.3
+docker build . -t zavx0z/bib:webRTC
 docker build . -t zavx0z/bib:noVNC_latest
 ```
 
